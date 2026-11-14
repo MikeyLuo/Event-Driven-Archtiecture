@@ -5,3 +5,11 @@ services:
       - "127.0.0.1:4566:4566"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      FLOCI_SERVICES_LAMBDA_DOCKER_NETWORK: streampulse-network
+    networks:
+      - backend
+
+networks:
+  backend:
+    name: streampulse-network

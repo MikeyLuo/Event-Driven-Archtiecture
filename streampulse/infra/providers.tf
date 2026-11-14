@@ -9,10 +9,14 @@ provider "aws" {
 
   s3_use_path_style = true //use path localhost:4566/bukcet-name for s3
 
-  endpoints { //routing listed service calls to Floci
-    kinesis  = "http://localhost:4566"
-    dynamodb = "http://localhost:4566"
-    s3       = "http://localhost:4566"
-    sts      = "http://localhost:4566"
+  endpoints {
+    kinesis        = "http://127.0.0.1:4566"
+    dynamodb       = "http://127.0.0.1:4566"
+    s3             = "http://127.0.0.1:4566"
+    sts            = "http://127.0.0.1:4566"
+    iam            = "http://127.0.0.1:4566"
+    lambda         = "http://127.0.0.1:4566"
+    cloudwatchlogs = "http://127.0.0.1:4566"
+    apigateway     = "http://127.0.0.1:4566"
   }
 }
